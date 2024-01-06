@@ -16,7 +16,6 @@ function CitiesProvider({ children }) {
         const res = await fetch(`${BASE_URL}/cities`);
         const data = await res.json();
         setCities(data);
-        console.log(data);
       } catch (error) {
         alert('something went  wrong...!');
       } finally {
