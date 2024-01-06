@@ -11,21 +11,35 @@ import {
 } from 'react-leaflet';
 import { useCities } from '../Contexts/CitiesContext';
 import { useEffect, useState } from 'react';
+import { useGeolocation } from '../hooks/useGeolocation';
+import Button from './Button';
 
 function Map() {
   const { cities } = useCities();
   const [searchParams] = useSearchParams();
   const [mapPosition, setMapPosition] = useState([40, 0]);
+  const {
+    isLoading: isMapLoading,
+    position: getUserPosition,
+    getPosition,
+  } = useGeolocation();
 
   const mapLat = searchParams.get('lat');
   const mapLng = searchParams.get('lng');
 
   useEffect(
     function () {
-      console.log('Changed');
       if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
     },
     [mapLat, mapLng]
+  );
+
+  useEffect(
+    function () {
+      if (getUserPosition)
+        setMapPosition([getUserPosition.lat, getUserPosition.lng]);
+    },
+    [getUserPosition]
   );
 
   return (
@@ -35,6 +49,9 @@ function Map() {
       scrollWheelZoom={true}
       className={styles.mapContainer}
     >
+      <Button type='position' onClick={getPosition}>
+        {isMapLoading ? 'Getting your position ...' : 'Click to get position'}
+      </Button>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
