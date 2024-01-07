@@ -35,6 +35,78 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "les Escaldes",
+      "country": "Andorra",
+      "date": "2024-01-07T10:03:57.127Z",
+      "notes": "ye",
+      "emoji": "🇦🇩",
+      "position": {
+        "lat": "42.47209690919285",
+        "lng": "1.6040039062500002"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "El Ghicha",
+      "country": "Algeria",
+      "date": "2024-01-07T10:04:47.831Z",
+      "notes": "",
+      "emoji": "🇩🇿",
+      "position": {
+        "lat": "34.05265942137599",
+        "lng": "2.1533203125000004"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Midelt",
+      "country": "Morocco",
+      "date": "2024-01-07T10:59:50.148Z",
+      "notes": "r",
+      "emoji": "🇲🇦",
+      "position": {
+        "lat": "32.32427558887655",
+        "lng": "-5.405273437500001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Midelt",
+      "country": "Morocco",
+      "date": "2024-01-07T11:00:14.934Z",
+      "notes": "",
+      "emoji": "🇲🇦",
+      "position": {
+        "lat": "32.32427558887655",
+        "lng": "-5.405273437500001"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Paramo del Sil",
+      "country": "Spain",
+      "date": "2024-01-07T11:00:56.958Z",
+      "notes": "",
+      "emoji": "🇪🇸",
+      "position": {
+        "lat": "42.837308816784635",
+        "lng": "-6.531063046875001"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Arraia-Maeztu",
+      "country": "Spain",
+      "date": "2024-01-07T11:02:06.054Z",
+      "notes": "",
+      "emoji": "🇪🇸",
+      "position": {
+        "lat": "42.72280375732727",
+        "lng": "-2.4279785156250004"
+      },
+      "id": 98443203
     }
   ]
 }
