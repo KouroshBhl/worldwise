@@ -31,6 +31,7 @@ function Form() {
 
   useEffect(
     function () {
+      if (!lat && !lng) return;
       async function getCityDetails() {
         try {
           setisLoadingData(true);
@@ -61,6 +62,8 @@ function Form() {
   if (isLoadingData) return <Spinner />;
 
   if (error) return <Message message={error} />;
+
+  if (!lat && !lng) return <Message message='Start by clicking on the map!' />;
 
   return (
     <form className={styles.form}>
