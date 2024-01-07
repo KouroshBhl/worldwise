@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Contexts/UserAuthContext';
 import PageNav from '../components/PageNav';
+import Button from '../components/Button';
 import styles from './Login.module.css';
 import { useEffect, useState } from 'react';
 
@@ -48,7 +49,7 @@ export default function Login() {
         </div>
 
         <div>
-          <button>Login</button>
+          <Button type='primary'>Login</Button>
         </div>
       </form>
     </main>
